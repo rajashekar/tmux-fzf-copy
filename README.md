@@ -1,8 +1,13 @@
 # tmux-fzf-copy
 
 A tmux plugin to copy text using fuzzy search. 
-I was looking for tmux plugin where I can grab any text from above and paste it in current prompt. I did'nt find any so
-created this one. This plugin is extended from [tmux-fzf-url](https://github.com/wfxr/tmux-fzf-url). 
+I was looking for tmux plugin where I can quickly grab any text from above and paste it in current prompt. 
+There are already amazing plugins like [tmux-copy-toolkit](https://github.com/CrispyConductor/tmux-copy-toolkit), 
+but requires jumping to that location and selecting text and copy to current line.
+
+This plulgin gives fzf fuzzy search for all the words in current buffer. This plugin is extended from [tmux-fzf-url](https://github.com/wfxr/tmux-fzf-url). 
+Thanks to [Wenxuan](https://github.com/wfxr).
+
 Here is a demo, where this plugin can be helpful, do grab pod name and ssh to it.
 ![fzf-copy-demo](tmux-fzf-copy.gif "tmux fzf copy demo")
 
