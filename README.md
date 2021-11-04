@@ -8,7 +8,8 @@ but requires jumping to that location and selecting text and copy to current lin
 This plulgin gives fzf fuzzy search for all the words in current buffer. This plugin is extended from [tmux-fzf-url](https://github.com/wfxr/tmux-fzf-url). 
 Thanks to [Wenxuan](https://github.com/wfxr).
 
-Here is a demo, where this plugin can be helpful, do grab pod name and ssh to it.
+Here is a demo, where this plugin can be helpful, for example if you want to grab pod name 
+(which often changes, so auto completions might not help) and ssh to it. Hope this helps.
 ![fzf-copy-demo](tmux-fzf-copy.gif "tmux fzf copy demo")
 
 ### 📥 Installation
