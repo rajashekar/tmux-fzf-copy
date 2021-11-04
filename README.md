@@ -1,3 +1,8 @@
+# tmux-fzf-copy
+
+A tmux plugin to copy text using fuzzy search. This plugin is hugely inspired from
+[tmux-fzf-url](https://github.com/wfxr/tmux-fzf-url)
+
 ### 📥 Installation
 
 Prerequisites:
