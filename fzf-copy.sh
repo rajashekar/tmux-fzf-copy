@@ -40,7 +40,7 @@ if [[ $# -ge 1 && "$1" != '' ]]; then
     mapfile -t extras < <(echo "$content" |eval "$1")
 fi
 
-items=$(printf '%s\n' "${urls[@]}" "${wwws[@]}" "${ips[@]}" "${gits[@]}" "{all[@]}" "${extras[@]}" |
+items=$(printf '%s\n' "${urls[@]}" "${wwws[@]}" "${ips[@]}" "${gits[@]}" "${all[@]}" "${extras[@]}" |
     grep -v '^$' |
     sort -u |
     nl -w3 -s '  '
