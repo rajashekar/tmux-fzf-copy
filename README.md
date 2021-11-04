@@ -23,7 +23,7 @@ Clone this repo somewhere and source `fzf-copy.tmux` at the config file.
 
 ### 📝 Usage
 
-The default key-binding is `u`(of course prefix hit is needed), it can be modified by
+The default key-binding is `v`(of course prefix hit is needed), it can be modified by
 setting value to `@fzf-copy-bind` at the tmux config like this:
 
 ``` tmux

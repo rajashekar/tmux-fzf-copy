@@ -13,11 +13,11 @@ fzf_filter() {
 
 copy_text() {
     if hash pbcopy &>/dev/null; then
-        nohup echo "$@" | pbcopy
+        nohup echo -n "$@" | tmux load-buffer - && tmux save-buffer - | pbcopy | tmux paste-buffer
     elif hash xclip &>/dev/null; then
-        nohup echo "$@" | xclip
+        nohup echo -n "$@" | tmux load-buffer - && tmux save-buffer - | xclip | tmux paste-buffer
     elif hash xsel &>/dev/null; then
-        nohup echo "$@" | xclip
+        nohup echo -n "$@" | tmux load-buffer - && tmux save-buffer - | xsel | tmux paste-buffer
     fi
 }
 
