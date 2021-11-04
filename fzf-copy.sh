@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 get_fzf_options() {
     local fzf_options
     local fzf_default_options='-d 35% -m -0 --no-preview --no-border'
@@ -47,5 +49,5 @@ items=$(printf '%s\n' "${urls[@]}" "${wwws[@]}" "${ips[@]}" "${gits[@]}" "${extr
 mapfile -t chosen < <(fzf_filter <<< "$items" | awk '{print $2}')
 
 for item in "${chosen[@]}"; do
-    copy_text "$item" &>"/tmp/tmux-$(id -u)-fzf-url.log"
+    copy_text "$item" &>"/tmp/tmux-$(id -u)-fzf-copy.log"
 done
