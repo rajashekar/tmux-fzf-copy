@@ -39,6 +39,13 @@ setting value to `@fzf-copy-bind` at the tmux config like this:
 set -g @fzf-copy-bind 'x'
 ```
 
+Currently below are the capture groups used to grab words, lines and quotes.
+```
+mapfile -t words < <(echo "$content" |grep -oE '\b[^ ]+\b')
+mapfile -t lines < <(echo "$content" |grep -oE '.*')
+mapfile -t quotes < <(echo "$content" |grep -oE '".*"')
+```
+
 You can also extend the capture groups by defining `@fzf-copy-extra-filter`:
 
 ``` tmux
