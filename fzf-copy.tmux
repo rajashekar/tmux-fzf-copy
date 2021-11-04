@@ -11,7 +11,7 @@ tmux_get() {
 
 key="$(tmux_get '@fzf-copy-bind' 'u')"
 history_limit="$(tmux_get '@fzf-copy-history-limit' 'screen')"
-extra_filter="$(tmux_get '@fzf-copy-extra-filter' '')"
+extra_filter="$(tmux_get '@fzf-copy-extra-filter' 'grep -oE "\b[^ ]+\b"')"
 echo "$extra_filter" > /tmp/filter
 
 tmux bind-key "$key" run -b "$SCRIPT_DIR/fzf-copy.sh '$extra_filter' $history_limit";
